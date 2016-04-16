@@ -19,17 +19,29 @@ $numbersLanguages = [
         'three' => 'tris'
     ]
 ];
+?>
 
-echo 'array_change_key_case' . "<br>";
-print_r(array_change_key_case($numbers, CASE_UPPER));
-echo "<br>";
+<h3>array_change_key_case</h3>
+<p>Changes the case of the keys, upper case or lower case.</p>
+<pre><? print_r($numbers); ?></pre>
+<p>array_change_key_case($numbers, CASE_UPPER)</p>
+<pre><? print_r(array_change_key_case($numbers, CASE_UPPER)); ?> </pre>
 
-echo 'array_chunk' . "<br>";
-echo 'makes array split into pieces' . "<br>";
-print_r(array_chunk($numbers, 1));
-echo "<br>";
+<h3>array_chunk</h3>
+<p>makes array split into pieces</p>
+<p>print_r(array_chunk($numbers, 1));</p>
+<pre><? print_r(array_chunk($numbers, 1)); ?></pre>
 
-echo 'array column' . "<br>";
+
+
+<h3>array_column</h3>
+<p>Takes the values on the array key and makes into an array, very useful in sql queries</p>
+<p>array_column($numbersLanguages, 'one')</p>
+<pre><? print_r($numbersLanguages) ?></pre>
+
+<pre><? print_r(array_column($numbersLanguages, 'one')); ?></pre>
+<?php
+
 print_r(array_column($numbersLanguages, 'one'));
 echo "<br>";
 

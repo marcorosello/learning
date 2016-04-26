@@ -19,12 +19,12 @@ bin/phpspec run
 
 Start testing you application
 
-### Test
+### 4. Test
 
 1. Test that number 1 = I
 
     ```php
-    $this->convertArabicToRoman(1)->shouldBe('I');
+        $this->convertArabicToRoman(1)->shouldBe('I');
     ```
 
 2. Do the same for the  following numbers: 3, 5, 6, 4, 9, 10, 40, 50, 90

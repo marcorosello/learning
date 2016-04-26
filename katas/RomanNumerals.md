@@ -19,7 +19,7 @@ bin/phpspec run
 
 Start testing you application
 
-### 4. Test
+## 4. Test
 
 1. Test that number 1 = I
 

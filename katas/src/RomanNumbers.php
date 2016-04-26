@@ -33,7 +33,7 @@ class RomanNumbers {
         while ($remainingArabic > 0) {
             $greatestArabicValue = $arabicValues[$arabicIterator];
             //if the remaining value equal or greater of maximum arabic
-            if ($arabicNumber >= $greatestArabicValue) {
+            if ($remainingArabic >= $greatestArabicValue) {
                 $romanNumber .= $this->arabicToRoman[$greatestArabicValue];
                 $remainingArabic -= $greatestArabicValue;
                 continue;

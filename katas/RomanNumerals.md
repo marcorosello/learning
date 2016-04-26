@@ -5,7 +5,7 @@ The purpose of this exercise is to convert arabic numerals to roman numbers.
 Arabic numerals are common numbers 1, 5, 12, these need to be converted to roman numbers, I, V, XII.
 
 
-## 1. Install everything
+## 1. Install dependencies
 
 composer update
 

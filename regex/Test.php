@@ -8,7 +8,8 @@ class Test extends PHPUnit_Framework_TestCase {
      */
     public function testFilter($given, $expected)
     {
-        $this->assertEquals($expected, SizeFilter::filter($given));
+        $parser = new SizeFilter();
+        $this->assertEquals($expected, $parser->filter($given));
     }
 
     function sizeProvider()
@@ -44,8 +45,10 @@ class Test extends PHPUnit_Framework_TestCase {
             ["UNI" , "one size"],
             ["OZ" , "one size"],
             ["ONESIZE" , "one size"],
+            ["ONESZ" , "one size"],
             ["OSFA" , "one size"],
             ["1SIZE" , "one size"],
+            ["FITS ALL" , "one size"],
             // remove "size" if followed by numbers
             ["size 36" , '36'],
             // remove "size" if preceded by text
@@ -61,8 +64,13 @@ class Test extends PHPUnit_Framework_TestCase {
             ["X-LARGE" , "xl"],
             ["X-LARG" , "xl"],
             ["XL-2X" , "xl-2x"],
+            //replace ½ by .5
+            ["3½" , "3.5"],
+            //remove eu
+            ["EU 40" , "40"],
             //make sure they don't change
             ['iphone' , 'iphone'],
+            ['IPHONE 6 PLUS' , 'iphone 6plus'],
             ["XXS" , "xxs"],
             ["yellow" , "yellow"],
             ['34/R', '34/r']

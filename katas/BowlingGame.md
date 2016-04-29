@@ -36,7 +36,7 @@ Start testing you application
 
     ```php
         $this->roll(0);
-        $this->score()->shouldBe(1);
+        $this->score()->shouldBe(0);
     ```
 
 2.  Test that all are 1 (20 throws, 20 pins knocked)

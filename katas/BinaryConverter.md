@@ -1,4 +1,4 @@
-# Bowling game
+# Binary Converter
 
 The purpose of this exercise is to convert numbers from binary to base of 10.
 

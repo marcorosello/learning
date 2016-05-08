@@ -12,14 +12,13 @@ class PrimeNumbersSpec extends ObjectBehavior
         $this->shouldHaveType('PrimeNumbers');
     }
 
-    function it_should_not_have_primes()
+    function it_should_find_1()
     {
         $this->getPrimes(1)->shouldBe([]);
+        $this->getPrimes(3)->shouldBe([3]);
+        $this->getPrimes(6)->shouldBe([2, 3]);
+        $this->getPrimes(53)->shouldBe([53]);
+        $this->getPrimes(71)->shouldBe([71]);
+        $this->getPrimes(15)->shouldBe([3, 5]);
     }
-
-    function it_should_be_two()
-    {
-        $this->getPrimes(2)->shouldBe([2]);
-    }
-
 }
